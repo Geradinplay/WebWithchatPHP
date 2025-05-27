@@ -1,0 +1,129 @@
+.chat-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px); /* если фиксированный header/footer */
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #eef4fa;
+    border: 1px solid #cbd8e4;
+    height: 100%;
+}
+
+/* Единый стиль сообщения */
+.chat-message {
+    max-width: 65%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    word-wrap: break-word;
+    line-height: 1.4;
+    background-color: #dceeff;
+    color: #2b3e50;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Свои сообщения — просто сдвигаем вправо */
+.chat-message.self {
+    align-self: flex-end;
+}
+
+/* Чужие сообщения — остаются слева */
+.chat-message.other {
+    align-self: flex-start;
+}
+
+
+/* Заголовок сообщения */
+.msg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
+
+.sender {
+    font-weight: 600;
+}
+
+/* Кнопки редактирования и удаления */
+.msg-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.msg-actions button {
+    background: none;
+    border: none;
+    font-size: 0.75em;
+    line-height: 1;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.msg-actions button:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Метка времени */
+.timestamp {
+    font-size: 0.7em;
+    color: #777;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Поле ввода и кнопка */
+.chat-input-wrapper {
+    display: flex;
+    margin-top: 12px;
+    gap: 8px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #4da6ff;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.send-btn {
+    padding: 8px 16px;
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #007acc;
+}
+.adminName {
+    color: red;
+}
