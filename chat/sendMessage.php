@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['id'])) {
     http_response_code(403);
     echo "Unauthorized";
-    exit;
+    exit;//остановка от выполнения дальнейшего кода
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['message'])) {

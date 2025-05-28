@@ -29,7 +29,7 @@ $banned = $row["ban"];
 </head>
 <body>
 <header>
-    <h1>EASY CHAT</h1>
+    <h1>EASY CHAT HALL</h1>
     <div class="top-nav">
         <h2>
             <a href="../sessionDestroyer.php" >logout</a>
@@ -64,8 +64,14 @@ $banned = $row["ban"];
     </div>
     </section>
     <div class="divider-line"></div>
-
+<div style="display: flex">
     <a href="chat.php" class="go-to-chat-btn">Go to chat!</a>
+    <?php
+    if($_SESSION["role"] == "admin"){
+        echo '<a href="./report.php" class="go-to-chat-btn">Report!</a>';
+    }
+    ?>
+    </div>
     <section class="rules-block-wrapper">
         <div class="rules-block">
             <div class="rule-card">

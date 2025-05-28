@@ -35,31 +35,8 @@ if (!isset($_SESSION['id'])) {
     <div class="chat-container">
         <div class="chat-box" id="chat-box" data-userid="<?php echo $_SESSION['id']; ?>">
 
-            <!-- Чужое сообщение -->
-<!--            <div class="chat-message other" data-id="1">-->
-<!--                <div class="msg-header">-->
-<!--                    <span class="sender">Alice</span>-->
-<!--                    <span class="msg-actions">-->
-<!--            <button>edit</button>-->
-<!--            <button>del</button>-->
-<!--          </span>-->
-<!--                </div>-->
-<!--                <p class="msg-text">Hello, how are you?</p>-->
-<!--                <span class="timestamp">14:35</span>-->
-<!--            </div>-->
 
-            <!-- Твоё сообщение -->
-<!--            <div class="chat-message self" data-id="2">-->
-<!--                <div class="msg-header">-->
-<!--                    <span class="sender">You</span>-->
-<!--                    <span class="msg-actions">-->
-<!--            <button>edit</button>-->
-<!--            <button>del</button>-->
-<!--          </span>-->
-<!--                </div>-->
-<!--                <p class="msg-text">Fine, thanks!</p>-->
-<!--                <span class="timestamp">14:36</span>-->
-<!--            </div>-->
+<!--      Сообщения      -->
 
 
         </div>
@@ -74,6 +51,19 @@ if (!isset($_SESSION['id'])) {
 <footer>
     <p>© 2025 Easy Chat. All rights reserved.</p>
 </footer>
+
+<div id="edit-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+     background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 999;">
+    <div style="background: white; padding: 20px; border-radius: 8px; width: 300px;">
+        <h3>Edit Message</h3>
+        <input type="text" id="edit-popup-input" style="width: 100%; margin-bottom: 10px;">
+        <div style="display: flex; justify-content: space-between;">
+            <button id="edit-popup-back">Back</button>
+            <button id="edit-popup-send">Send</button>
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="ajaxChatRequests.js"></script>
 </html>

@@ -9,7 +9,9 @@
     flex-direction: column;
     height: calc(100vh - 200px); /* если фиксированный header/footer */
 }
-
+main {
+    padding-bottom: 20px;
+}
 .chat-box {
     flex-grow: 1;
     overflow-y: auto;
