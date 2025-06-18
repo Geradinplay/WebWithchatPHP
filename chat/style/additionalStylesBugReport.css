@@ -1,0 +1,54 @@
+.bug-form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.bug-form-card {
+    background: linear-gradient(145deg, #1e2b3a, #2c3e50);
+    color: #ecf0f1;
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bug-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bug-form-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #4da6ff;
+}
+
+.bug-form-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.bug-select,
+.bug-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.bug-select:focus,
+.bug-textarea:focus {
+    outline: none;
+    border-color: #4da6ff;
+    box-shadow: 0 0 5px rgba(77, 166, 255, 0.5);
+}

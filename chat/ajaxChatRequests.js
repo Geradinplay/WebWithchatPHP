@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const chatBox = document.getElementById("chat-box");
 
-    // Сначала получаем ID и роль пользователя из сессии
+    // Сначала получаем ID и роль пользователя из сессии (READ)
     loadChatBox();
     function loadChatBox() {
     fetch('./getSessionUserData.php')
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error getting user ID:", err));
 }
 
-    // --------------------------------------------------------------------------------- Отправка нового сообщения
+    // --------------------------------------------------------------------------------- Отправка нового сообщения (Create-update)
     const form = document.getElementById("message-form");
     const input = document.getElementById("message");
 

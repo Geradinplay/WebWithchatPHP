@@ -32,6 +32,7 @@ $banned = $row["ban"];
     <h1>EASY CHAT HALL</h1>
     <div class="top-nav">
         <h2>
+            <a class="reportBug"  href="reportBug.php">Report Bug</a>
             <a href="../sessionDestroyer.php" >logout</a>
         </h2>
     </div>

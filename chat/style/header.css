@@ -1,4 +1,14 @@
+header a {
+margin-right: 8%;
 
+}
+.reportBug {
+    font-size: medium;
+    text-decoration: none;
+    border: none;
+    text-underline: none;
+    color: #0059ff;
+}
 
 header {
     background-color: #4a90e2;
