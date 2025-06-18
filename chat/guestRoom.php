@@ -65,7 +65,7 @@ $banned = $row["ban"];
     </div>
     </section>
     <div class="divider-line"></div>
-<div style="display: flex">
+<div class="btn-menu-chat" >
     <a href="chat.php" class="go-to-chat-btn">Go to chat!</a>
     <?php
     if($_SESSION["role"] == "admin"){
